@@ -3,7 +3,7 @@
  *
  * Run: OWNER=6285xxxx bun run examples/simple-bot.ts
  */
-import { Client } from 'zaileys'
+import { Client } from '../src/index.js'
 
 const digitsOf = (jid: string): string => (jid.split(/[:@]/)[0] ?? '').replace(/\D/g, '')
 
@@ -23,7 +23,7 @@ client.on('disconnect', ({ reason, willReconnect }) => {
 })
 
 client.on('text', async (msg) => {
-  // if (digitsOf(msg.senderId) !== OWNER) return
+  if (digitsOf(msg.senderId) !== OWNER) return
 
   await msg.react('👀')
 
