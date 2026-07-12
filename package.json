@@ -1,5 +1,11 @@
 {
-  "dependencies": {
-    "zaileys": "^4.7.0"
-  }
+	"name": "zaileys-bot",
+	"type": "module",
+	"scripts": {
+		"start": "node index.ts"
+	},
+	"dependencies": {
+		"dotenv": "^17.4.2",
+		"zaileys": "^4.7.0"
+	}
 }
