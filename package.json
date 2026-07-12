@@ -2,10 +2,15 @@
 	"name": "zaileys-bot",
 	"type": "module",
 	"scripts": {
-		"start": "node index.ts"
+		"start": "node index.ts",
+		"build": "swc index.ts --out-file index.js"
 	},
 	"dependencies": {
 		"dotenv": "^17.4.2",
 		"zaileys": "^4.7.0"
+	},
+	"devDependencies": {
+		"@swc/cli": "^0.8.1",
+		"@swc/core": "^1.15.43"
 	}
 }
